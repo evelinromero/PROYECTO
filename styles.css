@@ -1,0 +1,29 @@
+:root{
+    --color-primario:#2563eb;
+    --color-secundario:#1e293b;
+    --color-fondo:#f8fafc;
+    --color-texto:#334155;
+    --radio:12px;
+    --transicion:.3s ease;
+}
+
+body {
+  font-family: var(--fuente);
+  margin: 0;
+  padding: 0;
+}
+
+#portafolio figure {
+  transition: transform 0.3s;
+}
+
+#portafolio figure:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  #portafolio {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
