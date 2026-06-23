@@ -22,6 +22,27 @@ body {
   transform: scale(1.05);
 }
 
+
+
+.card{
+    background:var(--color-blanco);
+    padding:20px;
+    border-radius:var(--radio);
+    box-shadow:var(--sombra);
+
+    transition:transform var(--transicion),
+               box-shadow var(--transicion);
+}
+
+.card:hover{
+    transform:translateY(-8px);
+
+    box-shadow:0 10px 20px rgba(0,0,0,.2);
+}
+
+
+
+
 @media (max-width: 768px) {
   #portafolio {
     display: grid;
