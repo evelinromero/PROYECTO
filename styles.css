@@ -1,3 +1,4 @@
+
 :root{
     --color-primario:#2563eb;
     --color-secundario:#1e293b;
@@ -26,4 +27,27 @@ body {
     display: grid;
     grid-template-columns: 1fr;
   }
+}
+
+
+
+
+@media (max-width: 768px){
+
+    .portafolio{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media (max-width: 480px){
+
+    .portafolio{
+        grid-template-columns:1fr;
+    }
+
+    h1{
+        font-size:1.8rem;
+    }
+
 }
