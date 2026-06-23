@@ -1,4 +1,4 @@
-
+/*COMMIT ROOT*/
 :root{
     --color-primario:#2563eb;
     --color-secundario:#1e293b;
@@ -22,8 +22,53 @@ body {
   transform: scale(1.05);
 }
 
+/*COMMIT FORMULARIO*/
+.contacto{
+    margin-top:40px;
+}
+
+form{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+input,
+textarea{
+    padding:12px;
+    border:2px solid #cbd5e1;
+    border-radius:var(--radio);
+
+    transition:border-color var(--transicion),
+               box-shadow var(--transicion);
+}
+
+input:focus,
+textarea:focus{
+    outline:none;
+
+    border-color:var(--color-primario);
+
+    box-shadow:0 0 10px rgba(37,99,235,.3);
+}
+
+button{
+    background:var(--color-primario);
+    color:white;
+    border:none;
+    padding:12px;
+    border-radius:var(--radio);
+    cursor:pointer;
+
+    transition:background var(--transicion);
+}
+
+button:hover{
+    background:#1d4ed8;
+}
 
 
+/*COMMIT CARDS*/
 .card{
     background:var(--color-blanco);
     padding:20px;
@@ -51,7 +96,7 @@ body {
 }
 
 
-
+/*COMMIT QUERY MEDIA*/
 
 @media (max-width: 768px){
 
