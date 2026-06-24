@@ -36,12 +36,6 @@ function mostrarMensaje(texto, tipo) {
   el.className = tipo === 'error' ? 'msg-error' : 'msg-exito';
 }
 
-function guardarEnStorage(datos) {
-  const mensajes = JSON.parse(localStorage.getItem('mensajes-contacto')) || [];
-  datos.fecha = new Date().toLocaleString('es-MX');
-  mensajes.push(datos);
-  localStorage.setItem('mensajes-contacto', JSON.stringify(mensajes));
-}
 
 function verMensajesGuardados() {
   const contenedor = document.getElementById('mensajes-guardados');
