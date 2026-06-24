@@ -181,16 +181,21 @@ footer {
 }
 
 #portafolio img {
-  width: 100%;          /* Ocupa todo el ancho del contenedor */
-  height: auto;         /* Ajusta la altura proporcionalmente */
-  border-radius: var(--radio); /* Bordes redondeados */
-  object-fit: cover;    /* Recorta si es necesario para mantener proporción */
+  width: 100%;              
+  height: 200px;            
+  object-fit: cover;        
+  border-radius: var(--radio);
   box-shadow: var(--sombra);
   transition: transform var(--transicion);
 }
 
 #portafolio img:hover {
   transform: scale(1.05);
+}
+
+#portafolio figure {
+  margin: 0;
+  text-align: center;
 }
 
 
