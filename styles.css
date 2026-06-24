@@ -73,6 +73,7 @@ nav a:hover {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    height: 100%;              /* todas las tarjetas misma altura */
 }
 
 .proyecto-card:hover {
@@ -80,10 +81,15 @@ nav a:hover {
     box-shadow: 0 10px 20px rgba(0,0,0,.2);
 }
 
+.proyecto-card figure {
+    width: 100%;
+    margin: 0;
+}
+
 .proyecto-card img {
     width: 100%;
-    height: 180px;              
-    object-fit: cover;         
+    height: 180px;              /* altura fija */
+    object-fit: cover;          /* recorta sin deformar */
     border-radius: var(--radio);
     margin-bottom: 10px;
 }
@@ -94,12 +100,11 @@ nav a:hover {
 }
 
 .proyecto-card p {
-  margin: 5px 0 10px;
+  margin: 5px 0 15px;
 }
 
 .proyecto-card a {
-  display: inline-block;
-  margin-top: auto;             
+  margin-top: auto;             /* empuja el link al final */
   color: var(--color-primario);
   text-decoration: none;
   font-weight: bold;
@@ -115,7 +120,7 @@ nav a:hover {
     padding: 20px;
     background: #e2e8f0;
     border-radius: var(--radio);
-    max-width: 600px;           /* ancho limitado */
+    max-width: 600px;
     box-shadow: var(--sombra);
 }
 
@@ -181,7 +186,7 @@ footer {
   }
 
   .proyecto-card img {
-    height: auto;             
+    height: auto;
     max-width: 100%;
   }
 
@@ -196,9 +201,10 @@ footer {
   }
 
   #contacto {
-    max-width: 90%;          
+    max-width: 90%;
   }
 }
+
 
 
 
