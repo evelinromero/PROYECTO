@@ -62,26 +62,31 @@ nav a:hover {
   color: var(--color-primario);
 }
 
-#portafolio figure {
-  transition: transform var(--transicion);
-}
-
-#portafolio figure:hover {
-  transform: scale(1.05);
-}
-
 /* Tarjetas */
-.proyecto-card{
-    background:var(--color-blanco);
-    padding:20px;
-    border-radius:var(--radio);
-    box-shadow:var(--sombra);
-    transition:transform var(--transicion), box-shadow var(--transicion);
+.proyecto-card {
+    background: var(--color-blanco);
+    padding: 20px;
+    border-radius: var(--radio);
+    box-shadow: var(--sombra);
+    transition: transform var(--transicion), box-shadow var(--transicion);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
-.proyecto-card:hover{
-    transform:translateY(-8px);
-    box-shadow:0 10px 20px rgba(0,0,0,.2);
+.proyecto-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0,0,0,.2);
+}
+
+.proyecto-card img {
+    width: 100%;
+    max-width: 300px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: var(--radio);
+    margin-bottom: 10px;
 }
 
 .proyecto-card h3 {
@@ -101,7 +106,7 @@ nav a:hover {
 }
 
 /* Formulario */
-#contacto{
+#contacto {
     margin-top:40px;
     padding:20px;
     background:#e2e8f0;
@@ -113,14 +118,14 @@ nav a:hover {
   color: var(--color-primario);
 }
 
-form{
+form {
     display:flex;
     flex-direction:column;
     gap:15px;
 }
 
 input,
-textarea{
+textarea {
     padding:12px;
     border:2px solid #cbd5e1;
     border-radius:var(--radio);
@@ -128,13 +133,13 @@ textarea{
 }
 
 input:focus,
-textarea:focus{
+textarea:focus {
     outline:none;
     border-color:var(--color-primario);
     box-shadow:0 0 10px rgba(37,99,235,.3);
 }
 
-button{
+button {
     background:var(--color-primario);
     color:white;
     border:none;
@@ -144,7 +149,7 @@ button{
     transition:background var(--transicion);
 }
 
-button:hover{
+button:hover {
     background:#1d4ed8;
 }
 
@@ -169,7 +174,12 @@ footer {
     grid-template-columns:1fr;
   }
 
-  h1{
+  .proyecto-card img {
+    height: auto;
+    max-width: 100%;
+  }
+
+  h1 {
     font-size:1.8rem;
   }
 
@@ -178,24 +188,6 @@ footer {
     flex-direction: column;
     gap: 10px;
   }
-}
-
-#portafolio img {
-  width: 100%;              
-  height: 200px;            
-  object-fit: cover;        
-  border-radius: var(--radio);
-  box-shadow: var(--sombra);
-  transition: transform var(--transicion);
-}
-
-#portafolio img:hover {
-  transform: scale(1.05);
-}
-
-#portafolio figure {
-  margin: 0;
-  text-align: center;
 }
 
 
