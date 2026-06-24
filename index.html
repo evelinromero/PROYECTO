@@ -21,11 +21,8 @@
 
 <main>
 
-
-    <section id="portafolio" aria-labelledby="titulo-portafolio">
-
-        <h2 id="titulo-portafolio">Nuestro Portafolio</h2>
-
+    <section id="portafolio">
+        <h2>Nuestro Portafolio</h2>
         <p>Conoce algunos proyectos del equipo.</p>
 
         <article class="proyecto-card">
@@ -33,13 +30,9 @@
                 <img src="https://www.systemgcmx.com/wp-content/uploads/2017/07/escolar-1-e1501247244769.png" alt="Proyecto sistema escolar">
                 <figcaption>Sistema Escolar</figcaption>
             </figure>
-
             <h3>Proyecto 1</h3>
             <p>Gestión de estudiantes y materias.</p>
-
-            <a href="#" aria-label="Ver proyecto Sistema Escolar">
-                Ver proyecto
-            </a>
+            <a href="#">Ver proyecto</a>
         </article>
 
         <article class="proyecto-card">
@@ -47,13 +40,9 @@
                 <img src="https://cdn.prod.website-files.com/608710000c1ca9c8a85c798e/66ad31ddb70d697f18618c86_comanda%20restaurante%20sistema.webp" alt="Proyecto restaurante">
                 <figcaption>Restaurante Online</figcaption>
             </figure>
-
             <h3>Proyecto 2</h3>
             <p>Pedidos y reservaciones en línea.</p>
-
-            <a href="#" aria-label="Ver proyecto Restaurante Online">
-                Ver proyecto
-            </a>
+            <a href="#">Ver proyecto</a>
         </article>
 
         <article class="proyecto-card">
@@ -61,33 +50,42 @@
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRva7zthCE9776ITObpEnoRqrlS2yNM2lwxWjqr7XxNcA&s=10" alt="Proyecto asistencia">
                 <figcaption>Control de Asistencia</figcaption>
             </figure>
-
             <h3>Proyecto 3</h3>
             <p>Registro de asistencias de alumnos.</p>
-
-            <a href="#" aria-label="Ver proyecto Control de Asistencia">
-                Ver proyecto
-            </a>
+            <a href="#">Ver proyecto</a>
         </article>
-
     </section>
 
-    <section id="contacto" aria-labelledby="titulo-contacto"> 
-        <h2 id="titulo-contacto">Contáctanos</h2> <form id="form-contacto" novalidate> <label for="nombre">Nombre completo</label>
-            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required aria-required="true"> 
-            <label for="email">Correo electrónico</label>
-            <input type="email" id="email" name="email" placeholder="correo@ejemplo.com" required aria-required="true">
-            <label for="mensaje">Mensaje</label> <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje..." required aria-required="true"></textarea>
-            <button type="submit">Enviar</button> <p id="msg-respuesta" aria-live="polite"></p>
-        </form> <div style="text-align: center; margin-top: 20px;"> 
-            <button onclick="verMensajesGuardados()" style=" background-color: #4CAF50; border: none; color: white; padding: 12px 24px; border-radius: 5px; font-size: 16px; cursor: pointer; transition: background-color 0.3s; " onmouseover="this.style.backgroundColor='#45a049'" onmouseout="this.style.backgroundColor='#4CAF50'"> </button> 
-        </div> <button onclick="verMensajesGuardados()">Ver mensajes guardados</button> <div id="mensajes-guardados"></div> </section>
+    <section id="contacto">
+
+        <h2>Contáctanos</h2>
+
+        <form id="form-contacto" novalidate>
+
+            <label>Nombre completo</label>
+            <input type="text" id="nombre" required>
+
+            <label>Correo electrónico</label>
+            <input type="email" id="email" required>
+
+            <label>Mensaje</label>
+            <textarea id="mensaje" required></textarea>
+
+            <button type="submit">Enviar</button>
+
+            <p id="msg-respuesta"></p>
+        </form>
+
+        <button onclick="verMensajesGuardados()">Ver mensajes guardados</button>
+
+        <div id="mensajes-guardados"></div>
+
+    </section>
 
 </main>
 
 <footer>
-    <p>© 2026 - Clase de Git y GitHub.</p>
-    <p>© 2026 - Portal del Equipo *. Todos los derechos reservados.</p>
+    <p>© 2026 - Portal del Equipo</p>
 </footer>
 
 <script src="script.js"></script>
