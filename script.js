@@ -43,10 +43,29 @@ function guardarEnStorage(datos) {
   localStorage.setItem('mensajes-contacto', JSON.stringify(mensajes));
 }
 
-// BONUS: función para mostrar los mensajes guardados en consola
 function verMensajesGuardados() {
+  const contenedor = document.getElementById('mensajes-guardados');
   const mensajes = JSON.parse(localStorage.getItem('mensajes-contacto')) || [];
-  console.table(mensajes);
+
+  if (mensajes.length === 0) {
+    contenedor.innerHTML = '<p>No hay mensajes guardados.</p>';
+    return;
+  }
+
+  let html = '<h3>Mensajes Guardados</h3>';
+
+  mensajes.forEach((msg, index) => {
+    html += `
+      <div class="mensaje-card">
+        <p><strong>${index + 1}. ${msg.nombre}</strong></p>
+        <p><strong>Correo:</strong> ${msg.email}</p>
+        <p><strong>Mensaje:</strong> ${msg.mensaje}</p>
+        <p><small>${msg.fecha}</small></p>
+      </div>
+    `;
+  });
+
+  contenedor.innerHTML = html;
 }
 
 // COMMIT 3: Guardar mensajes en localStorage
