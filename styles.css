@@ -71,9 +71,10 @@ nav a:hover {
     transition: transform var(--transicion), box-shadow var(--transicion);
     display: flex;
     flex-direction: column;
+    justify-content: space-between; /* distribuye contenido */
     align-items: center;
     text-align: center;
-    height: 100%;              /* todas las tarjetas misma altura */
+    height: 100%; /* todas las tarjetas misma altura */
 }
 
 .proyecto-card:hover {
@@ -88,7 +89,7 @@ nav a:hover {
 
 .proyecto-card img {
     width: 100%;
-    height: 180px;              /* altura fija */
+    height: 200px;              /* altura fija para uniformidad */
     object-fit: cover;          /* recorta sin deformar */
     border-radius: var(--radio);
     margin-bottom: 10px;
@@ -104,7 +105,7 @@ nav a:hover {
 }
 
 .proyecto-card a {
-  margin-top: auto;             /* empuja el link al final */
+  margin-top: auto;             /* link siempre al final */
   color: var(--color-primario);
   text-decoration: none;
   font-weight: bold;
@@ -120,7 +121,7 @@ nav a:hover {
     padding: 20px;
     background: #e2e8f0;
     border-radius: var(--radio);
-    max-width: 600px;
+    max-width: 600px;           /* ancho limitado */
     box-shadow: var(--sombra);
 }
 
