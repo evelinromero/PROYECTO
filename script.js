@@ -1,26 +1,27 @@
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('form-contacto');
-  const respuesta = document.getElementById('msg-respuesta');
-  
+
   form.addEventListener('submit', (e) => {
     e.preventDefault();
+
     const nombre = document.getElementById('nombre').value.trim();
     const email = document.getElementById('email').value.trim();
     const mensaje = document.getElementById('mensaje').value.trim();
-    
-    // Validación básica
+
     if (!nombre || !email || !mensaje) {
       mostrarMensaje('Por favor completa todos los campos.', 'error');
       return;
     }
-    
+
     if (!validarEmail(email)) {
       mostrarMensaje('Escribe un correo electrónico válido.', 'error');
       return;
     }
-    
+
     guardarEnStorage({ nombre, email, mensaje });
-    mostrarMensaje('¡Mensaje enviado correctamente! ', 'exito');
+
+    mostrarMensaje('¡Mensaje enviado correctamente!', 'exito');
+
     form.reset();
   });
 });
@@ -36,6 +37,15 @@ function mostrarMensaje(texto, tipo) {
   el.className = tipo === 'error' ? 'msg-error' : 'msg-exito';
 }
 
+function guardarEnStorage(data) {
+  const mensajes = JSON.parse(localStorage.getItem('mensajes-contacto')) || [];
+
+  data.fecha = new Date().toLocaleString();
+
+  mensajes.push(data);
+
+  localStorage.setItem('mensajes-contacto', JSON.stringify(mensajes));
+}
 
 function verMensajesGuardados() {
   const contenedor = document.getElementById('mensajes-guardados');
@@ -52,8 +62,8 @@ function verMensajesGuardados() {
     html += `
       <div class="mensaje-card">
         <p><strong>${index + 1}. ${msg.nombre}</strong></p>
-        <p><strong>Correo:</strong> ${msg.email}</p>
-        <p><strong>Mensaje:</strong> ${msg.mensaje}</p>
+        <p>Correo: ${msg.email}</p>
+        <p>Mensaje: ${msg.mensaje}</p>
         <p><small>${msg.fecha}</small></p>
       </div>
     `;
