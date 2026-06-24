@@ -82,20 +82,24 @@ nav a:hover {
 
 .proyecto-card img {
     width: 100%;
-    max-width: 300px;
-    height: 180px;
-    object-fit: cover;
+    height: 180px;              
+    object-fit: cover;         
     border-radius: var(--radio);
     margin-bottom: 10px;
 }
 
 .proyecto-card h3 {
   color: var(--color-secundario);
+  margin: 10px 0;
+}
+
+.proyecto-card p {
+  margin: 5px 0 10px;
 }
 
 .proyecto-card a {
   display: inline-block;
-  margin-top: 10px;
+  margin-top: auto;             
   color: var(--color-primario);
   text-decoration: none;
   font-weight: bold;
@@ -107,10 +111,12 @@ nav a:hover {
 
 /* Formulario */
 #contacto {
-    margin-top:40px;
-    padding:20px;
-    background:#e2e8f0;
-    border-radius:var(--radio);
+    margin: 40px auto;
+    padding: 20px;
+    background: #e2e8f0;
+    border-radius: var(--radio);
+    max-width: 600px;           /* ancho limitado */
+    box-shadow: var(--sombra);
 }
 
 #contacto h2 {
@@ -175,7 +181,7 @@ footer {
   }
 
   .proyecto-card img {
-    height: auto;
+    height: auto;             
     max-width: 100%;
   }
 
@@ -188,8 +194,11 @@ footer {
     flex-direction: column;
     gap: 10px;
   }
-}
 
+  #contacto {
+    max-width: 90%;          
+  }
+}
 
 
 
