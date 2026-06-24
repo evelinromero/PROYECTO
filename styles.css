@@ -180,5 +180,19 @@ footer {
   }
 }
 
+#portafolio img {
+  width: 100%;          /* Ocupa todo el ancho del contenedor */
+  height: auto;         /* Ajusta la altura proporcionalmente */
+  border-radius: var(--radio); /* Bordes redondeados */
+  object-fit: cover;    /* Recorta si es necesario para mantener proporción */
+  box-shadow: var(--sombra);
+  transition: transform var(--transicion);
+}
+
+#portafolio img:hover {
+  transform: scale(1.05);
+}
+
+
 
 
