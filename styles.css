@@ -1,211 +1,268 @@
-/* Variables */
-:root{
-    --color-primario:#2563eb;
-    --color-secundario:#1e293b;
-    --color-fondo:#f8fafc;
-    --color-texto:#334155;
-    --color-blanco:#ffffff;
-    --sombra:0 5px 10px rgba(0,0,0,.1);
-    --radio:12px;
-    --transicion:.3s ease;
-    --fuente:'Segoe UI', Arial, sans-serif;
+/* =========================
+   VARIABLES
+========================= */
+:root {
+    --color-primario: #2563eb;
+    --color-secundario: #1e293b;
+    --color-fondo: #f8fafc;
+    --color-texto: #334155;
+    --color-blanco: #ffffff;
+    --sombra: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --radio: 12px;
+    --transicion: 0.3s ease;
+    --fuente: 'Segoe UI', Arial, sans-serif;
 }
 
-/* Base */
+/* =========================
+   RESET
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-  font-family: var(--fuente);
-  margin: 0;
-  padding: 0;
-  background: var(--color-fondo);
-  color: var(--color-texto);
+    font-family: var(--fuente);
+    background: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
 }
 
-/* Header */
+/* =========================
+   HEADER
+========================= */
 header {
-  background: var(--color-primario);
-  color: white;
-  padding: 20px;
-  text-align: center;
+    background: var(--color-primario);
+    color: white;
+    text-align: center;
+    padding: 25px 20px;
 }
 
 header h1 {
-  margin: 0;
+    margin-bottom: 10px;
 }
 
 nav {
-  margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
 }
 
 nav a {
-  color: white;
-  margin: 0 10px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color var(--transicion);
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: var(--transicion);
 }
 
 nav a:hover {
-  color: var(--color-secundario);
+    color: #dbeafe;
 }
 
-/* Portafolio */
+/* =========================
+   PORTAFOLIO
+========================= */
 #portafolio {
-  padding: 40px;
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  gap: 20px;
+    padding: 60px 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    max-width: 1400px;
+    margin: auto;
+}
+
+#portafolio h2,
+#portafolio > p {
+    grid-column: 1 / -1;
+    text-align: center;
 }
 
 #portafolio h2 {
-  grid-column: 1/-1;
-  text-align: center;
-  color: var(--color-primario);
+    color: var(--color-primario);
+    font-size: 2rem;
+    margin-bottom: 10px;
 }
 
-/* Tarjetas */
+#portafolio > p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+/* =========================
+   TARJETAS
+========================= */
 .proyecto-card {
     background: var(--color-blanco);
-    padding: 20px;
     border-radius: var(--radio);
     box-shadow: var(--sombra);
-    transition: transform var(--transicion), box-shadow var(--transicion);
+    overflow: hidden;
+    transition: transform var(--transicion),
+                box-shadow var(--transicion);
+
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* distribuye contenido */
-    align-items: center;
     text-align: center;
-    height: 100%; /* todas las tarjetas misma altura */
 }
 
 .proyecto-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 10px 20px rgba(0,0,0,.2);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
 .proyecto-card figure {
-    width: 100%;
     margin: 0;
 }
 
 .proyecto-card img {
     width: 100%;
-    height: 200px;              /* altura fija para uniformidad */
-    object-fit: cover;          /* recorta sin deformar */
-    border-radius: var(--radio);
-    margin-bottom: 10px;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+.proyecto-card figcaption {
+    padding: 12px;
+    font-size: 1rem;
+    color: var(--color-secundario);
 }
 
 .proyecto-card h3 {
-  color: var(--color-secundario);
-  margin: 10px 0;
+    color: var(--color-secundario);
+    margin: 10px 20px;
 }
 
 .proyecto-card p {
-  margin: 5px 0 15px;
+    margin: 0 20px 20px;
+    flex-grow: 1;
 }
 
 .proyecto-card a {
-  margin-top: auto;             /* link siempre al final */
-  color: var(--color-primario);
-  text-decoration: none;
-  font-weight: bold;
+    text-decoration: none;
+    color: var(--color-primario);
+    font-weight: bold;
+    padding: 20px;
+    transition: var(--transicion);
 }
 
 .proyecto-card a:hover {
-  color: #1d4ed8;
+    color: #1d4ed8;
 }
 
-/* Formulario */
+/* =========================
+   CONTACTO
+========================= */
 #contacto {
-    margin: 40px auto;
-    padding: 20px;
+    max-width: 700px;
+    margin: 60px auto;
+    padding: 30px;
     background: #e2e8f0;
     border-radius: var(--radio);
-    max-width: 600px;           /* ancho limitado */
     box-shadow: var(--sombra);
 }
 
 #contacto h2 {
-  text-align: center;
-  color: var(--color-primario);
+    text-align: center;
+    color: var(--color-primario);
+    margin-bottom: 20px;
 }
 
 form {
-    display:flex;
-    flex-direction:column;
-    gap:15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-weight: 600;
 }
 
 input,
 textarea {
-    padding:12px;
-    border:2px solid #cbd5e1;
-    border-radius:var(--radio);
-    transition:border-color var(--transicion), box-shadow var(--transicion);
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #cbd5e1;
+    border-radius: var(--radio);
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
 }
 
 input:focus,
 textarea:focus {
-    outline:none;
-    border-color:var(--color-primario);
-    box-shadow:0 0 10px rgba(37,99,235,.3);
+    outline: none;
+    border-color: var(--color-primario);
+    box-shadow: 0 0 10px rgba(37, 99, 235, 0.2);
 }
 
 button {
-    background:var(--color-primario);
-    color:white;
-    border:none;
-    padding:12px;
-    border-radius:var(--radio);
-    cursor:pointer;
-    transition:background var(--transicion);
+    background: var(--color-primario);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: var(--radio);
+    cursor: pointer;
+    font-size: 1rem;
+    transition: var(--transicion);
 }
 
 button:hover {
-    background:#1d4ed8;
+    background: #1d4ed8;
 }
 
-/* Footer */
+#msg-respuesta {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#mensajes-guardados {
+    margin-top: 20px;
+}
+
+/* =========================
+   FOOTER
+========================= */
 footer {
-  background: var(--color-secundario);
-  color: white;
-  text-align: center;
-  padding: 20px;
-  margin-top: 40px;
+    background: var(--color-secundario);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
 }
 
-/* Responsive */
-@media (max-width: 992px){
-  #portafolio {
-    grid-template-columns: repeat(2,1fr);
-  }
+footer p {
+    margin: 5px 0;
 }
 
-@media (max-width: 600px){
-  #portafolio {
-    grid-template-columns:1fr;
-  }
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
 
-  .proyecto-card img {
-    height: auto;
-    max-width: 100%;
-  }
+    header h1 {
+        font-size: 1.8rem;
+    }
 
-  h1 {
-    font-size:1.8rem;
-  }
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
 
-  nav {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
+    #portafolio {
+        padding: 40px 20px;
+        grid-template-columns: 1fr;
+    }
 
-  #contacto {
-    max-width: 90%;
-  }
+    #contacto {
+        width: 90%;
+    }
 }
-
 
 
 
