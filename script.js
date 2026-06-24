@@ -48,3 +48,5 @@ function verMensajesGuardados() {
   const mensajes = JSON.parse(localStorage.getItem('mensajes-contacto')) || [];
   console.table(mensajes);
 }
+
+// COMMIT 3: Guardar mensajes en localStorage
