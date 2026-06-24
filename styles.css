@@ -32,6 +32,10 @@ header h1 {
   margin: 0;
 }
 
+nav {
+  margin-top: 10px;
+}
+
 nav a {
   color: white;
   margin: 0 10px;
@@ -175,5 +179,6 @@ footer {
     gap: 10px;
   }
 }
+
 
 
