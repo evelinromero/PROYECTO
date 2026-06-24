@@ -61,5 +61,3 @@ function verMensajesGuardados() {
 
   contenedor.innerHTML = html;
 }
-
-// COMMIT 3: Guardar mensajes en localStorage
