@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portal del Equipo</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -77,13 +78,13 @@
         <form id="form-contacto" novalidate>
 
             <label for="nombre">Nombre completo</label>
-            <input type="text" id="nombre" name="nombre" required aria-required="true">
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required aria-required="true">
 
             <label for="email">Correo electrónico</label>
-            <input type="email" id="email" name="email" required aria-required="true">
+            <input type="email" id="email" name="email" placeholder="correo@ejemplo.com" required aria-required="true">
 
             <label for="mensaje">Mensaje</label>
-            <textarea id="mensaje" name="mensaje" required aria-required="true"></textarea>
+            <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje..." required aria-required="true"></textarea>
 
             <button type="submit">Enviar</button>
 
@@ -91,13 +92,34 @@
 
         </form>
 
+        
+        <div style="text-align: center; margin-top: 20px;">
+            <button onclick="verMensajesGuardados()" style="
+                background-color: #4CAF50;
+                border: none;
+                color: white;
+                padding: 12px 24px;
+                border-radius: 5px;
+                font-size: 16px;
+                cursor: pointer;
+                transition: background-color 0.3s;
+            " onmouseover="this.style.backgroundColor='#45a049'" 
+               onmouseout="this.style.backgroundColor='#4CAF50'">
+            </button>
+        </div>
+        <div id="mensajes-guardados"></div>
+
     </section>
 
 </main>
 
+
 <footer>
-    <p>© 2026 - Clase de Git y GitHub.</p>
+    <p>© 2026 - Portal del Equipo *. Todos los derechos reservados.</p>
 </footer>
+
+
+<script src="script.js"></script>
 
 </body>
 </html>
