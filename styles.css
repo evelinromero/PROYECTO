@@ -1,0 +1,119 @@
+/*COMMIT ROOT*/
+:root{
+    --color-primario:#2563eb;
+    --color-secundario:#1e293b;
+    --color-fondo:#f8fafc;
+    --color-texto:#334155;
+    --radio:12px;
+    --transicion:.3s ease;
+}
+
+body {
+  font-family: var(--fuente);
+  margin: 0;
+  padding: 0;
+}
+
+#portafolio figure {
+  transition: transform 0.3s;
+}
+
+#portafolio figure:hover {
+  transform: scale(1.05);
+}
+
+/*COMMIT FORMULARIO*/
+.contacto{
+    margin-top:40px;
+}
+
+form{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+input,
+textarea{
+    padding:12px;
+    border:2px solid #cbd5e1;
+    border-radius:var(--radio);
+
+    transition:border-color var(--transicion),
+               box-shadow var(--transicion);
+}
+
+input:focus,
+textarea:focus{
+    outline:none;
+
+    border-color:var(--color-primario);
+
+    box-shadow:0 0 10px rgba(37,99,235,.3);
+}
+
+button{
+    background:var(--color-primario);
+    color:white;
+    border:none;
+    padding:12px;
+    border-radius:var(--radio);
+    cursor:pointer;
+
+    transition:background var(--transicion);
+}
+
+button:hover{
+    background:#1d4ed8;
+}
+
+
+/*COMMIT CARDS*/
+.card{
+    background:var(--color-blanco);
+    padding:20px;
+    border-radius:var(--radio);
+    box-shadow:var(--sombra);
+
+    transition:transform var(--transicion),
+               box-shadow var(--transicion);
+}
+
+.card:hover{
+    transform:translateY(-8px);
+
+    box-shadow:0 10px 20px rgba(0,0,0,.2);
+}
+
+
+
+
+@media (max-width: 768px) {
+  #portafolio {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/*COMMIT QUERY MEDIA*/
+
+@media (max-width: 768px){
+
+    .portafolio{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media (max-width: 480px){
+
+    .portafolio{
+        grid-template-columns:1fr;
+    }
+
+    h1{
+        font-size:1.8rem;
+    }
+
+}
